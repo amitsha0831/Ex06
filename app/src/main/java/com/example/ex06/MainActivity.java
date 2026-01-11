@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            whenClicked = findViewById(R.id.whenClicked);
             return insets;
+
         });
 
 
@@ -34,13 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void clicked(View view) {
-        whenClicked = findViewById(R.id.whenClicked);
 
-        if (counter < 6) {
-            counter++;
+        counter++;
+        if (counter % 7 != 0) {
             whenClicked.setText("This is a click number:" + counter);
         } else {
-            whenClicked.setText("Enough to click. Go to new start!");
+            whenClicked.setText("BOOM!");
         }
     }
 }
