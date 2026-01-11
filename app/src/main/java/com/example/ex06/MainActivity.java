@@ -16,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView whenClicked;
 
-    boolean flag = true;
-    int counter = 1;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void clicked(View view) {
-        if (flag) {
-            whenClicked = findViewById(R.id.whenClicked);
-            whenClicked.setText("This ia a click number:" + counter);
-        }
-            counter++;
+        whenClicked = findViewById(R.id.whenClicked);
 
+        if (counter < 6) {
+            counter++;
+            whenClicked.setText("This is a click number:" + counter);
+        } else {
+            whenClicked.setText("Enough to click. Go to new start!");
+        }
     }
 }
