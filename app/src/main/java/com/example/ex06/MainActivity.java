@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView whenClicked;
 
     boolean flag = true;
+    int counter = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
     public void clicked(View view) {
         if (flag) {
             whenClicked = findViewById(R.id.whenClicked);
-            whenClicked.setText("Oh, yea, I’ve been clicked!");
-            flag = false;
+            whenClicked.setText("This ia a click number:" + counter);
         }
+            counter++;
+
     }
 }
