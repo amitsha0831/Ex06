@@ -27,7 +27,7 @@
         android:layout_marginTop="164dp"
         android:text=""
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
